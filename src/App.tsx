@@ -28,7 +28,7 @@ function App() {
           }
         >
           <div className="p-4 outline outline-gray-800">
-            next slide in 5 sec{" "}
+            next slide in 5 sec
           </div>
           <div className="p-4 outline outline-gray-800">slide 2</div>
           <div className="p-4 outline outline-gray-800">slide 3</div>

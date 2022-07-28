@@ -13,11 +13,11 @@ const CarouselProvider: React.FC<CarouselPropType> = ({
   nextButton,
   SecondsIntervalBeforeNextSlide,
 }) => {
-  const [totalItems, setTotalItems] = useState(children.length);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const length = children.length;
 
   const handleNextItemClick = () => {
-    if (currentIndex + 1 === totalItems) {
+    if (currentIndex + 1 === length) {
       setCurrentIndex(0);
     } else {
       setCurrentIndex((prev) => prev + 1);
@@ -25,7 +25,7 @@ const CarouselProvider: React.FC<CarouselPropType> = ({
   };
   const handlePreviousItemClick = () => {
     if (currentIndex === 0) {
-      setCurrentIndex(totalItems - 1);
+      setCurrentIndex(length - 1);
     } else {
       setCurrentIndex((prev) => prev - 1);
     }
