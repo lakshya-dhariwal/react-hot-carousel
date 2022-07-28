@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CarouselItem, { Button } from "./Button";
+import { Button } from "./Button";
 
 export type CarouselPropType = {
   children: JSX.Element[];
