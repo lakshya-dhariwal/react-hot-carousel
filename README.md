@@ -1,11 +1,4 @@
-# React Simple Carousel
+# React Carousel
 
-Wrap your Elements in CarouselProvider and each JSX Element will become a Slide
-
-use these props for additional personalization :
-
-```children: JSX.Element[];
- previousButton?: JSX.Element;
- nextButton?: JSX.Element;
- SecondsIntervalBeforeNextSlide?: number;
-```
+About
+A highly customizable `carousel` package for React. Renders any JSX element given between the tags ! Easy Customizations

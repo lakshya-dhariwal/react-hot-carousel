@@ -1,46 +1,54 @@
 {
-  "name": "react-easy-carousel",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.46",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+  "name": "react-easy-carousel-component",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lakshya-dhariwalreact-easy-carousel-component",
+  "description": "A marquee component for React using CSS.",
+  "author": {
+    "name": "Lakshya Dhariwal",
+    "email": "lakshyadhariwal9@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lakshya-dhariwalreact-easy-carousel-component"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "carousel",
+    "react-component",
+    "typescript",
+    "slider",
+    "gallery"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rollup -c ",
+    "dev-example": "cd example/ && yarn start",
+    "dev": "rollup -c -w",
+    "build-example": "cd example/ && yarn build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "peerDependencies": {
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "tailwindcss": "^3.1.6"
-  }
+    "@babel/core": "^7.14.5",
+    "@babel/runtime": "^7.14.5",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@types/react": "^17.0.9",
+    "rollup": "^2.51.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "dist"
+  ]
 }

@@ -1,0 +1,5 @@
+dist
+.gitignore
+rollup.config.js
+tsconfig.json
+example
