@@ -2,7 +2,7 @@ import React from "react";
 
 type IndicatorsPropType = {
   navigationIndicator?: JSX.Element;
-  activeNavigationIndicator?: Element;
+  activeNavigationIndicator?: JSX.Element;
   navigationIndicatorContainerStyles?: React.CSSProperties;
   currentIndex: number;
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -24,7 +24,7 @@ const Indicators: React.FC<IndicatorsPropType> = ({
   const defaultNavigationIndicatorContainerStyles: React.CSSProperties = {
     position: "absolute",
     right: 0,
-    bottom: "3%",
+    bottom: "-3.6rem",
     left: 0,
     zIndex: 100,
     display: "flex",
@@ -42,10 +42,12 @@ const Indicators: React.FC<IndicatorsPropType> = ({
     cursor: "pointer",
     backgroundClip: "padding-box",
     opacity: 0.5,
+    display: "flex",
+    justifyContent: "space-between",
   };
   return (
     <div
-      className="navigationIndicatorContainer"
+      className="navigationIndicatorContainer "
       style={
         navigationIndicatorContainerStyles ||
         defaultNavigationIndicatorContainerStyles
@@ -54,25 +56,42 @@ const Indicators: React.FC<IndicatorsPropType> = ({
       {Array(CHILDREN_LENGTH)
         .fill(null)
         .map((_, index) => (
-          <div
-            key={index}
-            onClick={() => handleIndicatorClick(index)}
-            className={`${index === currentIndex && "active"} indicator`}
-          >
+          <React.Fragment key={index}>
             {index === currentIndex ? (
               <>
-                {activeNavigationIndicator || (
-                  <li style={{ ...liStyles, backgroundColor: "black" }}></li>
+                {activeNavigationIndicator ? (
+                  React.cloneElement(activeNavigationIndicator, {
+                    onClick: () => handleIndicatorClick(index),
+                  })
+                ) : (
+                  <li
+                    style={{
+                      ...liStyles,
+                      backgroundColor: "black",
+                      width: "1.25rem",
+                      borderRadius: "0.25em",
+                    }}
+                    onClick={() => handleIndicatorClick(index)}
+                    className="active indicator"
+                  ></li>
                 )}
               </>
             ) : (
               <>
-                {navigationIndicator || (
-                  <li style={{ ...liStyles, backgroundColor: "gray" }}></li>
+                {navigationIndicator ? (
+                  React.cloneElement(navigationIndicator, {
+                    onClick: () => handleIndicatorClick(index),
+                  })
+                ) : (
+                  <li
+                    style={{ ...liStyles, backgroundColor: "gray" }}
+                    onClick={() => handleIndicatorClick(index)}
+                    className=" indicator"
+                  ></li>
                 )}
               </>
             )}
-          </div>
+          </React.Fragment>
         ))}
     </div>
   );

@@ -9,8 +9,13 @@ export const Button: React.FC<{
   return (
     <button
       onClick={handleClick}
-      className={type === "previous" ? "previous-button" : "next-button"}
-      style={{}}
+      className={type === "previous" ? "previous-button" : "next-button w-10"}
+      style={{
+        color: "#000000",
+        opacity: 0.5,
+        cursor: "pointer",
+        padding: "0.5rem",
+      }}
     >
       {type === "previous" ? <PrevIcon /> : <NextIcon />}
     </button>
