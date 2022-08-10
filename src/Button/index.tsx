@@ -1,4 +1,6 @@
 import React from "react";
+import { PrevIcon } from "../Icons/Previous";
+import { NextIcon } from "../Icons/Next";
 
 export const Button: React.FC<{
   type: "previous" | "next";
@@ -7,9 +9,10 @@ export const Button: React.FC<{
   return (
     <button
       onClick={handleClick}
-      className="bg-gray-700 rounded-full text-white w-8 h-8 text-lg flex items-center justify-center "
+      className={type === "previous" ? "previous-button" : "next-button"}
+      style={{}}
     >
-      {type === "previous" ? "<" : ">"}
+      {type === "previous" ? <PrevIcon /> : <NextIcon />}
     </button>
   );
 };
