@@ -1,6 +1,6 @@
-# react-hot-carousels
+# 🔥 react-hot-carousels
 
-Build your own customized smoking hot Carousels
+Build your own customized smoking hot carousels
 
 <br />
 
