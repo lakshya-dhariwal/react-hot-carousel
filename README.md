@@ -6,7 +6,7 @@ Build your own customized smoking hot Carousels
 
 [![NPM](https://img.shields.io/npm/v/react-hot-carousel.svg?style=for-the-badge)](https://npmjs.com/package/react-hot-carousel)
 [![NPM](https://img.shields.io/github/license/lakshya-dhariwal/react-hot-carousel?style=for-the-badge)](https://npmjs.com/package/react-hot-carousel)
-[![NPM](https://img.shields.io/badge/author-lakshya-dhariwal-green?style=for-the-badge)](https://github.com/lakshya-dhariwal)
+[![NPM](https://img.shields.io/badge/author-lakshya-dhariwal?style=for-the-badge)](https://github.com/lakshya-dhariwal)
 
 <br />
 
@@ -75,8 +75,7 @@ export default Example;
 | autoPlay                           | allow autoplaying of styles or not                                                                                      | Boolean                         |
 | autoPlayInterval                   | number of seconds in which the next slide appears                                                                       | number (optional) default 3 sec |
 | carouselCustomContainerStyles      | Give your own styles to carousel container                                                                              | React.CSSProperties (optional)  |
-| navigationIndicatorContainerStyles | Give your own styles to navigation dots container                                                                       |                                 |
-
+| navigationIndicatorContainerStyles | Give your own styles to carousel container                                                                              | React.CSSProperties (optional)  |
 <br />
 
 ## 🚨 Forking this repo
