@@ -6,7 +6,6 @@ Build your own customized smoking hot carousels
 
 [![NPM](https://img.shields.io/npm/v/react-hot-carousel.svg?style=for-the-badge)](https://npmjs.com/package/react-hot-carousel)
 [![NPM](https://img.shields.io/github/license/lakshya-dhariwal/react-hot-carousel?style=for-the-badge)](https://npmjs.com/package/react-hot-carousel)
-[![NPM](https://img.shields.io/badge/author-lakshya-dhariwal?style=for-the-badge)](https://github.com/lakshya-dhariwal)
 
 <br />
 
@@ -32,7 +31,7 @@ yarn add react-hot-carousel
 
 ## 📦 Demo
 
-A [demo](https://lakshya-dhariwal.github.io/react-hot-carousel/) is worth a thousand words!
+A [demo](https://react-hot-carousel.netlify.app/) is worth a thousand words!
 
 ```tsx
 import Carousel from 'react-hot-carousel'
